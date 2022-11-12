@@ -1,6 +1,6 @@
-package tests.Practice;
+package tests.bPractice;
 import org.testng.annotations.Test;
-import utilities.TestBase;
+
 //import utilities.TestBaseClass;
 public class Q1 {
     /*
