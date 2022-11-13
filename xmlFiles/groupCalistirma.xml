@@ -17,8 +17,8 @@
             </run>
         </groups>
         <packages>
-            <package name="tests.ders16_PageObjectModel"></package>
-            <package name="tests.ders15_PageObjectModel"></package>
+            <package name="tests.day16_PageObjectModel"></package>
+            <package name="tests.day15_PageObjectModel"></package>
         </packages>
     </test>
 </suite>
