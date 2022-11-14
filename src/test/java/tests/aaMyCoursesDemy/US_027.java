@@ -1,4 +1,4 @@
-package tests.smokeTests;
+package tests.aaMyCoursesDemy;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -7,12 +7,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class PozitifLoginTesti {
-
-
+public class US_027 {
 
     @Test
-    public void pozitifLoginTesti(){
+    public void mUS_027Testi(){
 
         // Mycoursedemy anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
