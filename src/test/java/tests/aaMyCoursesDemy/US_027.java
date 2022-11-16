@@ -18,10 +18,10 @@ public class US_027 {
         MyCoursedemyPage myCoursedemyPage=new MyCoursedemyPage();
         myCoursedemyPage.loginLinki.click();
         // Kullanici email'i olarak valid email girin
-        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail0"));
 
         // Kullanici sifresi olarak valid sifre girin
-        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword0"));
 
         myCoursedemyPage.myCookies.click();
         ReusableMethods.bekle(2);
@@ -33,7 +33,7 @@ public class US_027 {
         softAssert.assertTrue(myCoursedemyPage.coursesLinki.isDisplayed());
 
         softAssert.assertAll();
-        Driver.closeDriver();
+        //Driver.closeDriver();
 
     }
 
