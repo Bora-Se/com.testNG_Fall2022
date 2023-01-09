@@ -6,24 +6,15 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.InstructorFor_Instructor;
+import pages.QualityDemyPage_Instructor;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_39 {
 
-    /*
-   the functions of the payment page should work correctly
--The pay with stripe button should be visible after clicking the stripe logo
--When the pay with stripe button is clicked, it should redirect to checkout.stripe.com
--When the close button is clicked, it should redirect to the shopping cart page.
--E-mail, card information, country information should be filled in appropriately on checkout.stripe.com page
--When the pay button is pressed, it should be checked that the necessary information has been filled.
--If the required information is filled when the pay button is clicked, a tick should appear on the pay button and then it should redirect to my_courses page.
--course purchased after payment should be displayed on my_courses page
-    */
-    InstructorFor_Instructor instructorFor_Instructor=new InstructorFor_Instructor();
+
+    QualityDemyPage_Instructor instructorFor_Instructor=new QualityDemyPage_Instructor();
     Actions actions=new Actions(Driver.getDriver());
 
 
@@ -31,27 +22,16 @@ public class US_39 {
     public void setUp(){
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         instructorFor_Instructor.acceptCookies.click();
-        instructorFor_Instructor.loginLink.click();
-        instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
-        instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+        instructorFor_Instructor.loginLink.click(); //
+        instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
+        instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
         instructorFor_Instructor.loginButton.click();
     }
 
     @Test
-    public void stripeLogoTest(){
-
-        /*Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-        ReusableMethods.bekle(2);
-        //instructorFor_Instructor.acceptCookies.click();
-        instructorFor_Instructor.loginLink.click();
-        instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
-        instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
-        instructorFor_Instructor.loginButton.click();
-
-         */
+    public void stripeLogoTest3901(){
 
         //-The pay with stripe button should be visible after clicking the stripe logo
-
 
         actions.moveToElement(instructorFor_Instructor.categories).perform();
         actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
@@ -64,17 +44,19 @@ public class US_39 {
         ReusableMethods.bekle(3);
 
         instructorFor_Instructor.wordpresslink.click();
-        instructorFor_Instructor.wordpressBuyNow.click();
+       instructorFor_Instructor.wordpressBuyNow.click();
 
-        instructorFor_Instructor.checkoutButton.click();
+         instructorFor_Instructor.checkoutButton.click();
         instructorFor_Instructor.stripeButoon.click();
 
         Assert.assertTrue(instructorFor_Instructor.payWithStripe.isDisplayed());
 
+        /* */
+
     }
 
     @Test
-    public void stripeButtonTest(){
+    public void stripeButtonTest3902(){
 
         // -When the pay with stripe button is clicked, it should redirect to checkout.stripe.com
 
@@ -104,7 +86,7 @@ public class US_39 {
 
     }
     @Test
-    public void shoppingCardPageTest(){
+    public void shoppingCardPageTest3903(){
 
         //-When the close button is clicked, it should redirect to the shopping cart page.
 
@@ -127,7 +109,7 @@ public class US_39 {
         Assert.assertTrue(instructorFor_Instructor.shoppingCardPage.isDisplayed());
     }
     @Test
-    public void StripecheckoutTest(){
+    public void StripecheckoutTest3904(){
 
         //-E-mail, card information, country information should be filled in appropriately on checkout.stripe.com page
 
@@ -159,7 +141,7 @@ public class US_39 {
         ReusableMethods.bekle(2);
         instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");
         ReusableMethods.bekle(2);
-      /*  actions.moveToElement(instructorFor_Instructor.countryName).perform();
+        /*actions.moveToElement(instructorFor_Instructor.countryName).perform();
         ReusableMethods.wait(2);
         actions.moveToElement(instructorFor_Instructor.countrySweden).click().perform();
         ReusableMethods.wait(2);  */
@@ -169,7 +151,48 @@ public class US_39 {
        Driver.closeDriver(); }
 
     @Test
-    public void tickTest(){
+    public void StripecheckoutKontrolTest3905(){
+
+        //   When the pay button is pressed, it should be checked that the necessary information has been filled.
+
+        actions.moveToElement(instructorFor_Instructor.categories).perform();
+        actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
+        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
+
+        ReusableMethods.bekle(3);
+
+        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        instructorFor_Instructor.courseBuyNow.click();
+
+        instructorFor_Instructor.checkoutButton.click();
+        instructorFor_Instructor.stripeButoon.click();
+        instructorFor_Instructor.payWithStripe.click();
+
+        instructorFor_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
+        ReusableMethods.bekle(2);
+        instructorFor_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
+        ReusableMethods.bekle(2);
+        instructorFor_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
+        ReusableMethods.bekle(2);
+        instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
+        ReusableMethods.bekle(2);
+        instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");
+        ReusableMethods.bekle(2);
+
+        //bir önceki testin aynisi cunku bilgilerin doldurulduguna dair bir test olmadigindan tekrar sendkeys ile gönderdim
+
+    }
+
+    @Test
+    public void tickTest3906(){
+       //Dikkat,Calistirmak icin, tek kullanim hakkimiz var! Yani son satiri uyuttuk
+       // -If the required information is filled when the pay button is clicked,
+       // a tick should appear on the pay button and then it should redirect to my_courses page.
+
         actions.moveToElement(instructorFor_Instructor.categories).perform();
         actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
         actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
@@ -201,18 +224,15 @@ public class US_39 {
         /*   instructorFor_Instructor.payButton.click();  */
         // yorumda kalmali cunku satin alma islemi yapildiktan sonra testler tekrar calismiyor
 
-
     }
 
     @Test
-    public void shoppingTest(){
+    public void shoppingTest3907(){
 
         //-Course purchased after payment should be displayed on my_courses page
 
         ReusableMethods.bekle(5);
-
         instructorFor_Instructor.myCourses.click();
-
         Assert.assertTrue(instructorFor_Instructor.myCoursePageWordpres.isDisplayed());
     }
 

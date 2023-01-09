@@ -23,4 +23,6 @@ public class AmazonPage {
     @FindBy(xpath = "//select[@title='Search in']")
     public WebElement dropdownMenu;
 
+
+
 }

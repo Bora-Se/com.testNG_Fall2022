@@ -8,8 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pages.InstructorFor_Instructor;
+import pages.QualityDemyPage_Instructor;
 
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -27,7 +26,7 @@ import utilities.ReusableMethods;
     -If the required information is filled when the pay button is clicked, a tick should appear on the pay button and then it should redirect to my_courses page.
     -course purchased after payment should be displayed on my_courses page
          */
-        InstructorFor_Instructor instructorFor_Instructor=new InstructorFor_Instructor();
+        QualityDemyPage_Instructor instructorFor_Instructor=new QualityDemyPage_Instructor();
         Actions actions=new Actions(Driver.getDriver());
         Asserts asserts =new Asserts(); // Assert?
 
@@ -38,8 +37,8 @@ import utilities.ReusableMethods;
             Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
             instructorFor_Instructor.acceptCookies.click();
             instructorFor_Instructor.loginLink.click();
-            instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
-            instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+            instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
+            instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
             instructorFor_Instructor.loginButton.click();
         }
 

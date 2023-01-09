@@ -1,13 +1,8 @@
 package tests.aqualityDemy;
 
-import org.apache.http.util.Asserts;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.QDPage;
 import pages.QualityDemyPage_User;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -15,9 +10,8 @@ import utilities.ReusableMethods;
 
 public class US_38 {
 
-    QDPage pageUser = new QDPage();
+    QualityDemyPage_User pageUser = new QualityDemyPage_User();
     Actions actions = new Actions(Driver.getDriver());
-
     SoftAssert softAssert = new SoftAssert();
 
     @Test
@@ -34,10 +28,9 @@ public class US_38 {
         pageUser.loginLinki.click();
 
         //Enter instructor's (valid) e-mail address
-        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
         //Enter instructor's (valid) password
-        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
-
+        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
         //Click login Button
         pageUser.loginButton.click();
 
@@ -54,7 +47,6 @@ public class US_38 {
         softAssert.assertTrue(actuelCompareUrl.contains(expectedCompare));
 
         softAssert.assertAll();
-
     }
 
     @Test
@@ -64,7 +56,7 @@ public class US_38 {
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
         ReusableMethods.bekle(2);
 
-        /*
+        /*//Click “cookies” pop-up message
        // pageUser.acceptCookies.click();
         //Click login link
         pageUser.loginLinki.click();
@@ -73,11 +65,10 @@ public class US_38 {
         pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
         //Enter instructor's (valid) password
         pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
-
         //Click login Button
-        pageUser.loginButton.click();
+        pageUser.loginButton.click();   */
 
-         */
+
         //Home page, Click a course "English Course Learn To Speak"
         pageUser.englishCourse.click();
         //Home/course/english-course-learn-to-speak, Click the "Buy now" button
@@ -85,7 +76,7 @@ public class US_38 {
 
         SoftAssert softAssert = new SoftAssert();
 
-        // Home/shopping_cart
+        // Home /shopping_cart
         String expected = "English Course Learn To Speak";
         String actuelShoppingCartElement = Driver.getDriver().getTitle();
         softAssert.assertTrue(actuelShoppingCartElement.contains(expected));
@@ -107,10 +98,9 @@ public class US_38 {
         pageUser.loginLinki.click();
 
         //Enter instructor's (valid) e-mail address
-        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
         //Enter instructor's (valid) password
-        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
-
+        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
         //Click login Button
         pageUser.loginButton.click();
 
@@ -123,6 +113,7 @@ public class US_38 {
         softAssert.assertTrue(pageUser.addedToCartButton.isDisplayed(), "Added to Cart Gorunmuyor");
 
         ReusableMethods.bekle(3);
+        // Home / shopping_cart
         pageUser.cartButton.click();
 
         softAssert.assertTrue(pageUser.englishCourseShoppingCart.isDisplayed(), "English Course Gorunmuyor");
@@ -146,10 +137,9 @@ public class US_38 {
         pageUser.loginLinki.click();
 
         //Enter instructor's (valid) e-mail address
-        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
         //Enter instructor's (valid) password
-        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
-
+        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
         //Click login Button
         pageUser.loginButton.click();
 
@@ -162,9 +152,10 @@ public class US_38 {
         softAssert.assertTrue(pageUser.addedTowishlistButton.isDisplayed(), "Added to wishlist Gorunmuyor");
 
         ReusableMethods.bekle(2);
+        // Home/my_courses
         pageUser.myCoursesButton.click();
+        // Home/my_wishlist
         pageUser.wishlistsButton.click();
-
         softAssert.assertTrue(pageUser.englishCourseMyWishlist.isDisplayed(), "English Course My_wishlist te Gorunmuyor");
 
         softAssert.assertAll();
@@ -186,10 +177,9 @@ public class US_38 {
         pageUser.loginLinki.click();
 
         //Enter instructor's (valid) e-mail address
-        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail11"));
+        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora2"));
         //Enter instructor's (valid) password
-        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword11"));
-
+        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora2"));
         //Click login Button
         pageUser.loginButton.click();
 
@@ -203,6 +193,7 @@ public class US_38 {
         softAssert.assertTrue(pageUser.addedToCartButton.isDisplayed(), "Already purchased Gorunmuyor");
 
         ReusableMethods.bekle(3);
+        // Home / shopping_cart
         pageUser.cartButton.click();
 
         softAssert.assertTrue(pageUser.englishCourseShoppingCart.isDisplayed(), "Web Design for PHP Gorunmuyor");
@@ -212,7 +203,6 @@ public class US_38 {
         softAssert.assertTrue(actuelGetEnrolledElementi.contains(expected));
 
         softAssert.assertAll();
-
 
     }
 
@@ -231,10 +221,9 @@ public class US_38 {
         pageUser.loginLinki.click();
 
         //Enter instructor's (valid) e-mail address
-        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmail11"));
+        pageUser.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora2"));
         //Enter instructor's (valid) password
-        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPassword11"));
-
+        pageUser.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora2"));
         //Click login Button
         pageUser.loginButton.click();
 

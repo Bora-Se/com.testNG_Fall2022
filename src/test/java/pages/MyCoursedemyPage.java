@@ -70,8 +70,8 @@ public class MyCoursedemyPage {
 
     public void loginMethodu(){
         loginLinki.click();
-        emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
-        passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+        emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
+        passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
 
         ReusableMethods.bekle(2);
         myCookies.click();

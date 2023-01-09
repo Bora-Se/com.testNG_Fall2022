@@ -3,14 +3,14 @@ package tests.aqualityDemy;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.QualityDemyPage_User;
+import pages.QualityDemyPage_User22;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_03 {
 
-    QualityDemyPage_User pageUser= new QualityDemyPage_User();
+    QualityDemyPage_User22 pageUser= new QualityDemyPage_User22();
 
     @Test
     public void testTC0301(){

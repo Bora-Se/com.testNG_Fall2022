@@ -43,7 +43,29 @@ public class P1_Notlar {
     //
 
 
+         /*
+   the functions of the payment page should work correctly
+-The pay with stripe button should be visible after clicking the stripe logo
+-When the pay with stripe button is clicked, it should redirect to checkout.stripe.com
+-When the close button is clicked, it should redirect to the shopping cart page.
+-E-mail, card information, country information should be filled in appropriately on checkout.stripe.com page
+-When the pay button is pressed, it should be checked that the necessary information has been filled.
+-If the required information is filled when the pay button is clicked, a tick should appear on the pay button and then it should redirect to my_courses page.
+-course purchased after payment should be displayed on my_courses page
+    */
 
+        // @Test
+    //    public void stripeLogoTest3901(){
+    //
+    //        /*Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
+    //        ReusableMethods.bekle(2);
+    //        //instructorFor_Instructor.acceptCookies.click();
+    //        instructorFor_Instructor.loginLink.click();
+    //        instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myStudentEmail3"));
+    //        instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myStudentPassword3"));
+    //        instructorFor_Instructor.loginButton.click();
+    //
+    //         */
 
 
 

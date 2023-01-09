@@ -1,11 +1,8 @@
 package tests.day18_testNGReports_paralelTesting;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.MyCoursedemyPage;
 import utilities.ConfigReader;
@@ -39,7 +36,7 @@ public class C04_SmokeTestRaporlu extends TestBaseRapor {
         // 1- yanlis kullanici adi, gecerli password
         myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myYanlisEmail"));
         extentTest.info("kullanici adi olarak yanlis email yazildi");
-        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
         extentTest.info("Password olarak gecerli password yazildi");
         // Login butonuna basarak login olmaya calisin
         myCoursedemyPage.loginButonu.click();
@@ -54,7 +51,7 @@ public class C04_SmokeTestRaporlu extends TestBaseRapor {
     public void yanlisPasswordTesti(){
         extentTest=extentReports.createTest("yanlis password","yanlis password ile giris yapilamaz");
         // 2- gecerli kullanici adi, yanlis password
-        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
         extentTest.info("kullanici adi olarak gecerli email yazildi");
         myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myYanlisPassword"));
         extentTest.info("Password olarak yanlis password yazildi");

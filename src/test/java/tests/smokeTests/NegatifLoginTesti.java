@@ -29,7 +29,7 @@ public class NegatifLoginTesti {
     public void yanlisKullaniciTesti(){
         // 1- yanlis kullanici adi, gecerli password
         myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myYanlisEmail"));
-        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
         // Login butonuna basarak login olmaya calisin
         myCoursedemyPage.loginButonu.click();
         // Basarili olarak giris yapilamadigini test edin
@@ -40,7 +40,7 @@ public class NegatifLoginTesti {
     @Test
     public void yanlisPasswordTesti(){
         // 2- gecerli kullanici adi, yanlis password
-        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
         myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myYanlisPassword"));
         // Login butonuna basarak login olmaya calisin
         myCoursedemyPage.loginButonu.click();

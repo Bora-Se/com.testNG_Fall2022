@@ -20,10 +20,10 @@ public class PozitifLoginTesti {
         MyCoursedemyPage myCoursedemyPage=new MyCoursedemyPage();
         myCoursedemyPage.loginLinki.click();
         // Kullanici email'i olarak valid email girin
-        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmail"));
+        myCoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora"));
 
         // Kullanici sifresi olarak valid sifre girin
-        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPassword"));
+        myCoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora"));
 
         myCoursedemyPage.myCookies.click();
         ReusableMethods.bekle(2);
