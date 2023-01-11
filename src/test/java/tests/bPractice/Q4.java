@@ -13,14 +13,13 @@ import java.util.List;
 
 public class Q4 extends TestBase {
 
-    /*
-     * Navigate to https://www.saucedemo.com/
+     /* * Navigate to https://www.saucedemo.com/
      * Enter the username as standard_user
      * Enter the password as secret_sauce
      * Click on login button
      *   Test1 : Choose price low to high
-     *   Test2 : Verify item prices are sorted from low to high with soft Assert
-     */
+     *   Test2 : Verify item prices are sorted from low to high with soft Assert  */
+
 
     SoftAssert softAssert = new SoftAssert();
 
@@ -38,7 +37,6 @@ public class Q4 extends TestBase {
         softAssert.assertEquals(act, exp, "Aktif secenekteki yazi expected datadan farkli.");
         softAssert.assertAll();
     }
-
     @Test
     public void saucedemoTest2() {
         driver.get("https://www.saucedemo.com/");
@@ -61,5 +59,4 @@ public class Q4 extends TestBase {
         softAssert.assertEquals(kontrolList, fiyatlarDouble);
         softAssert.assertAll();
     }
-
 }
